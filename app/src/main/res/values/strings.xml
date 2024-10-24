@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskListApp</string>
+    <string name="mis_tareas">Mis Tareas</string>
+    <string name="agregar_tareas">Agregar tareas</string>
+    <string name="escribe_tu_tarea">Escribe tu tarea</string>
+    <string name="agregar">Agregar</string>
+    <string name="tareas">Tareas</string>
+    <string name="ver_tareas_completadas">Ver Tareas Completadas</string>
+</resources>

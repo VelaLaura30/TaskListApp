@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragment_add_task">
+
+    <fragment
+        android:id="@+id/fragment_add_task"
+        android:name="com.example.tasklistapp.AddTaskFragment"
+        android:label="Agregar Tareas"
+        tools:layout="@layout/add_task">
+        <action
+            android:id="@+id/action_addTask_to_completedTasks"
+            app:destination="@id/fragment_completed_tasks" />
+        <action
+            android:id="@+id/action_addTask_to_taskDetail"
+            app:destination="@id/fragment_task_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_completed_tasks"
+        android:name="com.example.tasklistapp.CompletedTask"
+        android:label="Tareas Completadas"
+        tools:layout="@layout/completed_tasks">
+        <action
+            android:id="@+id/action_completedTasks_to_taskDetail"
+            app:destination="@id/fragment_task_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_task_detail"
+        android:name="com.example.tasklistapp.TaskDetailFragment"
+        android:label="Detalle de Tarea"
+        tools:layout="@layout/task_detail">
+        <argument
+            android:name="taskName"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
